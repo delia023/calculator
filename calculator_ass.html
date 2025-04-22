@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            background-color: rgba(0, 0, 0, 0.93);
+            height: 100vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            border-radius: 4px;
+            box-shadow: 5px 5px 5px 5px black;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            /* background-color: black; */
+            background-image: url(bacgrondimg.jfif);
+            height: 700px;
+            padding: 20px 30px;
+            width: 100%;
+            /* background-image: url(../HTML/Spotify/MTBF_16_9_2.png); */
+        }
+        .container h2{
+            color:black;
+            font-size: 50px;
+            /* font-weight: 300; */
+            /* font: 5em sans-serif; */
+            padding: 30px;
+        }
+        .container p{
+            /* color: rgb(255, 255, 255); */
+            align-items: center;
+            font: 2em sans-serif;
+            padding: 15px;
+        }
+        #hours{
+            background-color: transparent;
+            border-radius: 3px;
+            border: 3px solid whitesmoke;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            font: 2em sans-serif;
+            width: 450px;
+            height: 60px;
+            margin: 30px 0px;
+        }
+        #hours:focus-within{
+            border: none;
+            outline: none;
+            background-color: white;
+            color: rgb(0, 0, 0);
+        }
+        button{
+            width: 120px;
+            height: 40px;
+            font: 1em sans-serif;
+            font-size: 18px;
+            color: white;
+            border: 1px solid white;
+            /* text-align: start; */
+            /* padding-left: 20px; */
+            border-radius: 10px;
+            background-color: black;
+        }
+        #result{
+            color:black;
+            padding: 30px 0px;
+            font:40px;
+        }
+        input::placeholder{
+            font-size: 20px;
+            color: black;
+        }
+        /* RESPONSIVENESS */
+@media (max-width:774px) {
+    .container h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 40px;
+        height: fit-content;
+
+
+    }
+    .container p{
+        font-size: 30px;
+}
+}
+@media (max-width:563px){
+    .container h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        height: fit-content;
+
+
+    }
+    .container p{
+        font-size: 20px;
+}
+#result{
+            font-size:20
+            
+            px ;
+        }
+}
+@media (max-width:473px){
+    .container h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 25px;
+        height: fit-content;
+
+
+    }
+    .container p{
+        font-size: 20px;
+}
+#hours{
+             width: 350px;
+            height: 50px;
+            /* margin: 30px 0px; */
+
+}
+#result{
+            font-size:15px ;
+        }
+}
+@media (max-width:415px) {
+    .container h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 19px;
+        height: fit-content;
+
+
+    }
+    .container p{
+        font-size: 17px;
+}
+    #hours{
+             width: 300px;
+            height: 50px;
+            /* margin: 30px 0px; */
+}
+        input::placeholder{
+            font-size: 17px;
+            color: black;
+        }
+        
+}
+    
+@media (max-width:345px) {
+    .container h2{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        height: fit-content;
+
+
+    }
+    .container p{
+        font-size: 17px;
+}
+    #hours{
+             width: 280px;
+            height: 50px;
+            /* margin: 30px 0px; */
+}
+        input::placeholder{
+            font-size: 15px;
+            color: black;
+        }
+        #result{
+            font-size:15px ;
+        }
+}
+   
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Mary~Bella's Calculator</h2>
+            <p>Rate per Hour: $100</p>
+            <input type="number" id="hours" placeholder=" Number of hours">
+            <button onclick="Calculator()">Click</button>
+            <div id="result">Total Pay: $0.00</div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    function Calculator() {
+        let hourlyRate = 100;
+        let hoursWorked = parseFloat(document.getElementById("hours").value);
+        
+        let totalPay = hourlyRate * hoursWorked;
+        document.getElementById("result").textContent = "Total Pay: $" + totalPay.toFixed(2);
+    }
+</script>

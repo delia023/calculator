@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.bacground_colour{
+    background-image: url(pink.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#top{
+    background-color: rgb(243, 28, 100);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    width: 770px;
+    text-align: center;
+    padding: 4px 0 0 0;
+    border-radius: 6px;
+    position:absolute;
+    top: 6px;
+}
+#h1{
+    color:white ;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#hr{
+    background-color: white;
+    width: 500px;
+    margin: 30px 0 0 0;
+    height: 3px;
+
+}
+.bacground_colour #input::placeholder{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 0 0 20px;
+    font-weight: 500;
+}
+#input{
+    margin: 30px 0 0 0;
+    width: 500px;
+     background-color:rgb(243, 28, 100);
+     height: 50px;
+    border-radius: 20px;  
+}
+#input:hover{
+    outline: 1px  solid rgb(243, 28, 100);
+}
+.bacground_colour button{
+    border: none;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    color:white ;
+    background-color:  rgb(243, 28, 100);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 30px 0 0 0;
+    border-radius: 10px;
+}
+.bacground_colour button:hover{
+    transition: 1s ease-in;
+    background-color: white;
+    color: rgb(243, 28, 100);
+}
+#input2{
+    margin: 30px 0 0 0;
+    width: 500px;
+     background-color:rgb(243, 28, 100);
+     height: 50px;
+    border-radius: 10px;  
+    padding: 12px 0 0 6px;
+}
+#refreshs button{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color:white ;
+    background-color:rgb(243, 28, 100) ;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+/* RESPONSIVENESS */
+@media (max-width:774px) {
+    #top{
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        height: fit-content;
+
+
+    }
+}
+@media (max-width:608px) {
+    #top{
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 25px;
+        height: fit-content;
+
+    }
+}
+@media (max-width:503px) {
+    #top{
+        width: 420px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+        /* height: fit-content; */
+        height: 40px;
+        padding: 8px 0 0 5px;
+
+    }
+    #hr{
+        width: 400px;
+    }
+    #input{
+        width: 400px;
+    }
+    #input2{
+        width: 400px;
+    }
+}
+@media (max-width:402px){
+    #top{
+        width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        height: 40px;
+        padding: 8px 0 0 5px;
+
+    }
+    #hr{
+        width: 300px;
+    }
+    #input{
+        width: 300px;
+    }
+    #input2{
+        width: 300px;
+    }
+}
+@media (max-width:305px){
+    #top{
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        height: 30px;
+        padding: 8px 0 0 5px;
+
+    }
+    #hr{
+        width: 260px;
+    }
+    #input{
+        width: 260px;
+    }
+    .bacground_colour #input::placeholder{
+        font-size: 15px;
+    }
+    #input2{
+        width: 260px;
+    }
+    .bacground_colour button{
+        width: 100px;
+    }
+}
+</style>
+<body>
+    <div class="bacground_colour">
+        <p id="top"> Welcome To Mary~Bella's Word Censor</p>
+    <h1 id="h1">Word Censor App</h1>
+    <div id="hr"></div>
+    <input id="input" placeholder="What's on your mind ,Famz">
+    <button id="censorbtn" onclick="button()">Censor</button>
+    <div id="input2"></div>
+    <button onclick="refresh()" id="refreshs">Reload</button>
+    </div>
+
+</body>
+</html>
+<script>
+  let inputs = document.getElementById("input")
+  let output = document.getElementById("input2")
+
+  function button() {
+    console.log(inputs.value.toUpperCase());
+    const replacement = {
+       "FUCK":"****" ,
+        "PUSSY":"****" ,
+        "SEX":"***" ,
+        "STUPID":"******" ,
+        "MAD":"***" ,
+        "LUST":"****" ,
+        "KILL":"****" ,
+        "HATE":"****" ,
+        "BAD":"***" ,
+        "SAD":"***" ,
+        "LIE":"***" ,
+        "SHIT":"****" ,
+        "IDIOT":"*****" ,
+        "FOOL":"****" ,
+        "SCRAWNY":"*******" ,
+        "DOGGY":"*****" ,
+        "RAPE":"****" ,
+
+    }
+    let newText = inputs.value
+    for (const word in replacement){
+       newText = newText.replace(new RegExp(word, 'gi'), replacement[word])
+    }
+    // output.innerHTML = newText
+  }
+  function refresh() {
+    inputs.value = '';
+    output.innerHTML = '';
+    
+  }
+
+</script>

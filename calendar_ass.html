@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent {
+        /* background-color: crimson; */
+        background-image: url(flower.jfif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+    .parent h1{
+        color: white;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 30%;
+        background-color: white;
+        border-radius: 10px;
+        margin: 20px 0 0 0;
+        padding: 0 0 0 10px;
+    }
+
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 8%;
+        background-color: green;
+        border-radius: 10px;
+        color: white;
+        margin: 20px 0 0 0;
+    }
+
+    .display {
+        background-color: white;
+        width: 30%;
+        height: 100px;
+        border-radius: 5px 5px 10px 10px;
+        margin: 20px 0 0 0;
+        color: green;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 400;
+        padding:  0 0 0 5px;
+    }
+
+    /* RESPONSIVENESS */
+    @media (max-width:1081px){
+        .parent h1{
+        color: white;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 28%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 27%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 8%;
+        font-size: 13px;
+       
+    }
+
+    }
+    @media (max-width:1042px){
+        .parent h1{
+        color: white;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 26%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 25%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 8%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:915px){
+        .parent h1{
+        color: white;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 28%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 29%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 10%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:826px){
+        .parent h1{
+        color: white;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 28%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 29%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 10%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:815px){
+        .parent h1{
+        color: white;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 28%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 29%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 10%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:776px){
+        .parent h1{
+        color: white;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 28%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 29%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:738px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 30%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 30%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:613px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width:35%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width: 35%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:575px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:536px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:515px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:531px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:524px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 15%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:457px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 37%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:40%;
+        font-size: 15px;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 18%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:444px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 40%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:37%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 17%;
+        font-size: 11px;
+       
+    }
+
+    }
+    @media (max-width:441px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 42%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:42%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 23%;
+        font-size: 13px;
+       
+    }
+
+    }
+    @media (max-width:377px){
+        .parent h1{
+        color: white;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    #inp {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 45%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .display{
+        width:45%;
+    }
+    #days {
+        border: none;
+        outline: none;
+        height: 37px;
+        width: 25%;
+        font-size: 11px;
+       
+    }
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <h1>Enter Month</h1>
+        <input type="text" id="inp">
+        <button onclick="checkDays()" id="days">Check Days</button>
+        <div class="display" id="show"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    let inpt = document.getElementById("inp")
+    let dis = document.getElementById("show")
+
+    function checkDays() {
+        let val = inpt.value.toUpperCase()
+
+        if (val === "JANUARY") {
+            console.log('january has 31 days');
+            dis.innerHTML = "January has 31 days"
+        }
+
+        else if (val === "FEBRUARY") {
+            console.log('february has 28 days and 29 days in each leap year');
+            dis.innerHTML = "February has 28 days and 29 days in each leap year"
+        }
+        
+        else if (val === "MARCH") {
+            console.log('March has 31 days');
+            dis.innerHTML = "March has 31 days"
+        }
+        
+        else if (val === "APRIL") {
+            console.log('April has 30 days');
+            dis.innerHTML = "April has 30 days"
+        }
+        else if (val === "MAY") {
+            console.log('May has 31 days');
+            dis.innerHTML = "May has 31 days"
+        }
+        else if (val === "JUNE") {
+            console.log('Junehas 30 days');
+            dis.innerHTML = "June has 30 days"
+        }
+        else if (val === "JULY") {
+            console.log('July has 31 days');
+            dis.innerHTML = "July has 31 days"
+        }
+        else if (val === "AUGUST") {
+            console.log('Augusthas 31 days');
+            dis.innerHTML = "August has 31 days"
+        } 
+        else if (val === "SEPTEMBER") {
+            console.log('Septemberhas 30 days');
+            dis.innerHTML = "September has 30 days"
+        }
+        else if (val === "OCTOBER") {
+            console.log('Octoberhas 31 days');
+            dis.innerHTML = "October has 31 days"
+        }
+        else if (val === "NOVEMBER") {
+            console.log('Novemberhas 30 days');
+
+            dis.innerHTML = "November has 30 days"
+        }
+        else if (val === "DECEMBER") {
+            console.log('Decemberhas 31 days');
+            
+            dis.innerHTML = "December has 31 days"
+        }
+
+        else if (!val){
+            console.log("No Input")
+            alert("Input a valid month")
+            // dis.innerHTML = "No Input"
+        }
+
+        else{
+            alert("Invalid!")
+        }
+
+
+        // ALERT MESSEGE- send message
+        // let message = "This input is invalid"
+    }
+
+</script>

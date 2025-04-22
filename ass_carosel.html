@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pictures">
+        <div id="hold">
+            <img src="bacgrondimg.jfif" alt="" id="img1">
+            <img src="images.jfif" alt="" id="img2" style="display: none;">
+            <img src="castle.jfif" alt="" id="img3" style="display: none;">
+            <img src="castle.jfif" alt="" id="img4" style="display: none;">
+            <img src="refresh-img.png" alt="" id="img5" style="display: none;">
+        </div>
+    </div>
+    <div class="btn">
+        <button onclick="Prev()">Prev</button>
+        <button onclick="Next()">Next</button>
+    </div>
+</body>
+</html>
+<script>
+    let mary = 1; // start at img1
+
+    function showImg() {
+      if (mary === 1) {
+        document.getElementById("img1").style.display = "block";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("img3").style.display = "none";
+        document.getElementById("img4").style.display = "none";
+        document.getElementById("img5").style.display = "none";
+      } else if (mary === 2) {
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "block";
+        document.getElementById("img3").style.display = "none";
+        document.getElementById("img4").style.display = "none";
+        document.getElementById("img5").style.display = "none";
+      } else if (mary === 3) {
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("img3").style.display = "block";
+        document.getElementById("img4").style.display = "none";
+        document.getElementById("img5").style.display = "none";
+      }
+      else if (mary === 4) {
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("img3").style.display = "none";
+        document.getElementById("img4").style.display = "block";
+        document.getElementById("img5").style.display = "none";
+      }
+      else if (mary === 5) {
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("img3").style.display = "none";
+        document.getElementById("img4").style.display = "none";
+        document.getElementById("img5").style.display = "block";
+      }
+    }
+
+    function Next() {
+      if (mary === 1) {
+        mary = 2;
+      } else if (mary === 2) {
+       mary = 3;
+      } else {
+        mary = 1;
+      }
+      showImg();
+    }
+
+    function Prev() {
+      if (mary === 1) {
+        mary = 3;
+      } else if (mary === 2) {
+        mary = 1;
+      } else {
+        mary = 2;
+      }
+      showImg();
+    }
+
+    // Show the first image at start
+    showImg();
+  </script>

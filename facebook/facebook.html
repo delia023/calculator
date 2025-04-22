@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACEBOOK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* height: 100vh; */
+            background-color: rgba(128, 128, 128, 0.116);
+            font-family: sans-serif;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 100px;
+        }
+
+        .left img {
+            width: 500px;
+            padding-left: 120px;
+            margin-top: 15px;
+            color: #0866ff;
+        }
+
+        .left h3 {
+            color: rgba(0, 0, 0, 0.822);
+            font-size: 19px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 2px;
+            padding-left: 152px;
+            margin-top: -1px;
+        }
+
+        div form {
+
+            background-color: white;
+            border-radius: 10px;
+            height: 330px;
+            width: 400px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin-top: -100px;
+            margin-left: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.774);
+
+        }
+
+        #email {
+            padding: 2px;
+            border: 1px solid rgba(128, 128, 128, 0.63);
+            width: 340px;
+            height: 40px;
+            /* padding-top: 100px; */
+            border-radius: 4px;
+        }
+
+        #pass {
+            padding: 9px;
+            border: 1px solid rgba(128, 128, 128, 0.63);
+            width: 340px;
+            height: 40px;
+            margin: 30px;
+            margin-left: 1.5px;
+            border-radius: 4px;
+        }
+
+        .login {
+            background-color: #0866ff;
+            color: white;
+            height: 40px;
+            width: 100%;
+            margin-top: 5px;
+            border: none;
+            border-radius: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            margin-left: 1px;
+
+        }
+
+        #password {
+            color: blue;
+            font-size: 17px;
+            margin-top: 6px;
+            padding-left: 80px;
+        }
+
+        .right h3:nth-child(4) {
+            /* text-decoration: underline; */
+            background-color: blue;
+            color: blue;
+        }
+
+        .right h3:nth-child(4):hover {
+            text-decoration: underline;
+            background-color: blue;
+            color: blue;
+        }
+
+        .h3:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+
+        .hr {
+            margin: 10px;
+            width: 360px;
+            margin-left: -15px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        #create {
+            background-color: #42b72a;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            width: 200px;
+            height: 50px;
+            border: none;
+            border-radius: 7px;
+            margin-top: -160px;
+            /* display: list-item; */
+            align-self: center;
+            margin-left: 10px;
+            text-decoration: none;
+            padding: 12px;
+        }
+
+        main {
+            padding-top: 450px;
+        }
+
+        .page {
+            padding-left: 15px;
+            font-size: 14px;
+            padding-bottom: 15px;
+
+        }
+
+        .pg2 {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="left">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+            <h3>facebook helps you connect and share <br> with the people in your life.</h3>
+        </span>
+        <div class="right">
+            <form>
+                <input type="text" placeholder="Email address or phone number" id="email">
+                <input type="text" placeholder="password" id="pass"> <br>
+                <button class="login">Log in</button>
+                <h3 id="password">forgotten password?</h3>
+                <hr class="hr">
+                <div>
+                    <a id="create" href="">create new account</button></a>
+                </div>
+                <span class="page">
+                    <a class="pg2" href=""><b>Create a page</b></a>
+                    <span> for a celebrity, brand or business.</span>
+                </span>
+
+            </form>
+        </div>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div id="images">
+            <img height="200px" width="200px" src="" id="img">
+        </div>
+        <button onclick="prev()">prev</button> <button onclick="next()">next</button>
+    </div>
+</body>
+</html>
+<script>
+    let img = document.getElementById("img")
+    let pictureDatabase = [
+        "bird.jfif",
+        "bacgrondimg.jfif",
+        "images.jfif",
+        "flower2.webp",
+        "castle.jfif",
+       
+    ]
+    let index = 0
+    img.src = pictureDatabase[index]
+
+    function next() {
+        if (index ===( pictureDatabase.length - 1)) {
+            index = 0
+        } else {
+            index = index + 1
+        }
+        img.src = pictureDatabase[index]
+        console.log(index);
+    }
+
+    function prev() {
+        if (index === 0) {
+            index = pictureDatabase.length - 1
+            alert("you've gotten to your limit")
+        }
+        else{
+            index = index - 1
+        }
+      img.src = pictureDatabase[index]
+      console.log(index);
+      
+    }
+   
+</script>

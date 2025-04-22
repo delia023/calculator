@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #inputs{
+        background-color:red;
+        color: white;
+        /* border: none; */
+    }
+</style>
+<body>
+  <input type="text" id="input"> 
+  <button onclick="show()">show</button> 
+  <input type="text" id="inputs"> 
+  <button onclick="shows()">show</button> 
+</body>
+</html>
+<script>
+    let string = `30`
+    console.log(string.concat(" " ,"days","of","javascript"));
+    console.log("30" + " " + "days of javascript");
+    
+    console.log(10 + undefined);
+
+    let noProf = null
+    noProf = {
+        name: "Mary",
+        age :20,
+        isMarried: false,
+    }
+
+    let strNum = Number("10")
+    console.log(10 + strNum);
+    
+    function show () {
+        let input = document.getElementById("input").value.trim()
+        console.log(input);
+        // ALERT MESSEGE- send message
+        let message = "hi bella"
+
+        alert(message)
+        
+    }
+    function shows () {
+        let inputs = document.getElementById("inputs").value.trim()
+        let first = +(inputs[0])
+        let third = +(inputs[0])
+        // PRE INCREMENT
+        console.log(first + third);
+        let count = 0
+        console.log(++count)        // 1
+        console.log(count)  
+        // POST INCREMENT
+        let count2 = 0
+        console.log(count2++)        // 0
+        console.log(count2)    
+    
+        // PROMPT-collect info from user
+        // let number = prompt('Enter number', '+234 907 xxx xxxx')
+        // console.log(number)
+
+        // CONFIRM-when u want ser to confirm
+        const agree = confirm('Are you sure you like to delete? ')
+        console.log(agree) // result will be true or false based on what you click on the dialog box
+    }
+//    component operators
+    console.log(3>2);
+    // handoperator
+    let oper = true && true
+    // OR OPERATORS
+    let sec = true || false
+    // NEGATION
+    console.log(!true);
+    // CONDITIONAL
+    let isRaining = true
+    isRaining
+    ? console.log('You need a rain coat.')
+    : console.log('No need for a rain coat.')
+
+    let comp = 4 > 3
+    comp  ? console.log("hello") : console.log("no hello")
+     
+    let newStr = ''
+    newStr  ? console.log("MARY") : console.log("BELLA")
+
+    let cond = true
+    !cond   ? console.log("na lie") : console.log("na lie")
+   
+    
+    
+    
+</script>

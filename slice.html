@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp" type="text">
+    <button onclick="add()">Add name</button>
+</body>
+</html>
+<script>
+    // SLICE
+    const numbers = [1,2,3,4,5]
+    console.log(numbers.slice(0))
+    console.log(numbers.slice(1))
+    console.log(numbers.slice(1, 4))
+    console.log(numbers.slice(1, numbers.length - 1))
+    console.log(numbers.slice(1, 3))
+    console.log(numbers.slice(0, 3))
+    // SPLICE
+    numbers.splice(0, 2, 10, 20)
+    console.log(numbers);
+    numbers.splice(0, 1)
+    console.log(numbers);
+    numbers.splice(0, 1)
+    console.log(numbers);
+
+    numbers.push(6)
+    console.log(numbers);
+    
+// CLASSWORK
+    let database = []
+    function add(){
+     let inputs = document.getElementById("inp")
+      database.push(inputs.value ) 
+      console.log(database);
+      
+    }
+    
+    
+    
+    
+
+    
+
+
+    
+</script>

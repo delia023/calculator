@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Carousel Example</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #carousel img {
+            height: fit-content;
+            display: block;
+            margin: 0 auto;
+        }
+        .wrap-btn {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .wrap-btn button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cantainer">
+        <div id="carousel">
+            <!-- Image will be displayed here -->
+        </div>
+        <div class="wrap-btn">
+            <button onclick="prev()">Prev</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+    <script>
+        // Array of image paths
+        let images = [
+            "bacgrondimg.jfif",
+            "castle.jfif",
+            "flower2.webp",
+            "flower2.webp",
+            "images.jfif"
+        ];
+
+        let currentIndex = 0;
+
+        // Function to display image at currentIndex
+        function showImage(index) {
+            const carousel = document.getElementById("carousel");
+            carousel.innerHTML = `<img src="${images[index]}" alt="Image ${index + 1}" />`;
+        }
+
+        // Show initial image
+        showImage(currentIndex);
+
+        // Show previous image
+        function prev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Show next image
+        function next() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

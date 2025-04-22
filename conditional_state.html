@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      let num  = 3
+    if (num > 0) {
+        console.log(`num is a positive number`);   
+    } 
+    let isRaining = true
+    if (!isRaining) {
+        console.log('something is happening');
+     } else{
+        console.log('something is also happening');
+        
+    }
+    let isMarried = false
+    if (!isMarried) {
+        console.log('something happened');
+     } else{
+        console.log('something else happening');
+        
+    }
+    let a  = 0
+    if (a > 0) {
+        console.log(`${a} is a positive number`);   
+    } else if (a < 0) {
+        console.log(`${a} is a negative number`);   
+    }    else if (a === 0) {
+        console.log(`${a} is zero`);
+    }  else {
+        console.log(`${a} is not a number`);
+    }
+
+
+    // 80 = 100 is A
+    // 70 = 79 is B
+    // 60 = 69 is C
+    // 50 = 59 is D
+    // 0 = 49 is F
+    // let weatherNew = 'cloudy'
+    let weatherNew = prompt("Enter a season", "rainy,cloudy,sunny") 
+    switch (weatherNew) {
+        case rainy:
+            console.log('');
+            break;
+        case sunny:
+            console.log(it is sunny);
+            break;
+        case cloudy:
+            console.log(it is cloudy);
+            break;
+    
+        default:
+            console.log(nothing is happening);
+            
+            break;
+    }
+   
+
+
+</script>

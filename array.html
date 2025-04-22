@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const newArr = Array(8).fill("Mr joshua")
+    console.log(newArr);
+
+    const newestArr = []
+
+    let numArr = [1, 2, 3, 4, 5]
+    let strArr = ['a', 'b', 'c', 'd', 'e']
+    let boolArr = [true, false, true, false]
+    let mixArr = [1, "a" , true['Mr samuel', 'Miss mary']]
+
+    console.log(numArr.length);
+
+    let classes = 'javascript'
+    console.log(classes.split(""));
+    console.log(classes[0]);
+    // classes[0] = "Y"
+    // strings cannot be modified but array can be modified using index
+    console.log(classes.replace("j" , "Y"));
+    console.log(classes);
+console.log(classes.includes("java"));
+
+    
+    
+
+    let companiesString = 'facebook, google, microsoft, apple, ibm, oracle, amazon'
+    console.log(companiesString.split(',  '));
+
+    const fruits = ['banana', 'orange', 'mango','lemon','apple','grape','kiwi','pearl']
+    // let lastIndexOfFruit = fruits[fruits.length-1]
+   
+  
+
+    let a = 10 % 2
+    console.log(a);
+    
+    if (fruits.length % 2 === 0) {
+        let evenMid = fruits.length / 2
+        let evenMid2 = evenMid - 1
+        console.log(fruits[evenMid],fruits[evenMid2]);
+    } else{
+        let midIndexOfFruit = Math.floor(fruits.length / 2)
+        console.log(fruits[midIndexOfFruit]);
+    
+    }
+    
+    fruits[0] = 'pearl'
+    console.log(fruits);
+    fruits[3] = 'pineapple'
+    console.log(fruits);
+    
+
+fruits[fruits.length - 1] = "Dates"
+console.log(fruits);
+
+let b = [1, 2 , 3,]
+let c = [4, 5, 6]
+let bAndc = b.concat(c)
+console.log( bAndc);
+
+
+const fruitsy = ['banana', 'orange', 'mango', 'lemon',]
+let index = fruits.indexOf('banana') 
+
+if(index === -1){
+   console.log('This fruit does not exist in the array')  
+} else {
+    console.log('This fruit does exist in the array')
+}
+console.log(fruits.includes("man"));
+
+
+const numbers = [1, 2, 3, 4, 5, 3, 1, 2]
+
+console.log(numbers.lastIndexOf(2)) // 7
+console.log(numbers.lastIndexOf(0)) // -1
+console.log(numbers.lastIndexOf(1)) //  6
+console.log(numbers.lastIndexOf(4)) //  3
+console.log(numbers.lastIndexOf(6)) // -1  
+    
+</script>
