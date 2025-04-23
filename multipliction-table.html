@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        width: 100%;
+    }
+    #parent {
+        /* height: 400px; */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        background-color: white;
+        padding-top: 30px;
+        
+    }
+    #hold{
+        background-color: white;
+        box-shadow: 0 0 8px gray;
+        min-width: 50%;
+        min-height: fit-content;
+        padding: 0 10px 10px;
+        border-radius: 10px;
+    }
+    #time {
+        color: rgba(0, 0, 0, 0.863);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        margin: 10px 0 0 0;
+    }
+
+    #inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    #inp1 {
+        background-color: transparent;
+        border: 1px solid black;
+        height: 20px;
+    }
+
+    #inp2 {
+        background-color: transparent;
+        border: 1px solid black;
+        margin: 0 0 0 40px;
+        height: 20px;
+    }
+
+    #btn{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        padding-top: 15px;
+    }
+
+    #Generate {
+        text-align: center;
+        background-color:rgb(12, 178, 243);
+        border: none;
+        width: 74px;
+        height: 30px;
+        border-radius: 10px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        /* margin: 10px 0 0 100px; */
+    }
+
+    #inp1:focus {
+        border: none;
+        outline: 2px solid blue;
+
+    }
+
+    #inp2:focus {
+        border: none;
+        outline: 2px solid blue;
+
+    }
+
+    #show {
+        /* background-color: yellow; */
+        width: 100%;
+        height:fit-content;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif sans-serif;
+        /* border: 2px solid blue; */
+        text-align: left;
+        /* display: none; */
+    }
+    hr{
+        width: 100%;
+        border: 1pt solid #ccc;
+    }
+
+    @media (max-width:450px){
+        #parent {
+        width: 100%;
+        }
+
+        #time{
+            font-size: 30px;
+        }
+
+        #show{
+            padding: 0 50px;
+        }
+    }
+</style>
+
+<body>
+    <div id="parent">
+        <div id="hold">
+            <div id="time">Time Table Generator</div>
+            <div id="inputs">
+                <span>Starting From: <input id="inp1" type="text"></span>
+                <span>Ends At: <input id="inp2" type="text"></span>
+            </div>
+            <div id="btn">
+                <button onclick="gen()" id="Generate">Generate</button>
+            </div>
+        </div>
+        <div id="show"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    let input1 = document.getElementById("inp1")
+    let input2 = document.getElementById("inp2")
+    let display = document.getElementById("show")
+
+    function gen() {
+        let inpt1 = +(input1.value)
+        let inpt2 = +(input2.value)
+        if (!inpt1 || !inpt2) {
+            alert("Please enter a valid number!")
+        }
+
+        else if (inpt1 < inpt2) {
+            for (let i = 1; i <= inpt2; i++) {
+                let num = ""
+                for (let f = inpt1; f <= inpt2; f++) {
+                    num += `<br><hr> ${f} Times Table <br> `
+                    for (let p = 1; p <= 12; p++) {
+                        num += `${f} X ${p} = ${f * p} <br>`;
+
+
+                    }
+                }
+                console.log(num);
+            display.innerHTML = num
+            }
+        }
+
+        else if (inpt1 > inpt2) {
+            for (let i = 1; i <= inpt1; i++) {
+                let num = ""
+                for (let f = inpt1; f >= inpt2; f--) {
+                    num += `<br><hr> ${f}Times Table <br> `
+                    for (let p = 1; p <= 12; p++) {
+                        num += `${f} X ${p} = ${f * p} <br> `;
+
+
+                    }
+                }
+                console.log(num);
+            display.innerHTML = num
+            }
+        }
+
+        else {
+            for (let i = 1; i <= 1; i++) {
+                let num = ""
+
+                for (let p = 1; p <= 12; p++) {
+                    num += `${inpt1} X ${p} = ${inpt1 * p} \n`;
+
+
+                }
+
+                console.log(num);
+        display.innerHTML = num
+            }
+        }
+    }
+</script>

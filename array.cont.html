@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2 id="showName"></h2> 
+</body>
+</html>
+<script>
+    let show = document.getElementById("showName")
+   let  NumberTWO = [1, 2, 3, 4,5] 
+    NumberTWO.pop()
+    console.log(NumberTWO);  // remaining 1,2,3,4
+    NumberTWO.pop()
+    console.log(NumberTWO);  // remaining 1,2,3
+    //pop: add one item from the beginning
+    NumberTWO.push(4)
+    console.log(NumberTWO);
+    
+    shiftNum = [1, 2, 3, 4,5]
+    shiftNum.shift()
+    console.log(shiftNum);  
+    //shift: remove one item from the beginning
+    shiftNum.unshift(1)
+    console.log(shiftNum);
+    //unshift: add one item from the beginning
+     let scatteredArray = [2, 4, 1, 6, 9, 3]
+     scatteredArray.sort()
+     console.log(scatteredArray);
+     scatteredArray.reverse()
+     console.log(scatteredArray);
+     
+</script>
