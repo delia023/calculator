@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    .color{
+        height: 50vh;
+        width: 50vw;
+    }
+</style>
 <body>
-    <div id="parent" style="background-color: red; height: 100vh; width: 100%; display: flex; flex-direction: column;">
-    </div>
+    <input id="inp" type="text">
+    <button onclick="show()">show</button>
+    <div class="color"></div>
 </body>
 
 </html>
@@ -33,10 +39,10 @@
         console.log(`2 * ${i} = ${2 * i}`);
         let table = ""
  
-        for(let x = 1; x <= 12; x++){
-            table += `2 * ${i} = ${2 * i}`;
-            hold.innerHTML = table
-        }
+        // for(let x = 1; x <= 12; x++){
+        //     table += `2 * ${i} = ${2 * i}`;
+        //     hold.innerHTML = table
+        // }
     }
 
     const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
@@ -56,5 +62,102 @@
         }
 
     }
+    let numbers = [1,2, 3, 4, 5, 6, 7,8 ,9]
+    let sum = 0
+    for(let i = 0; i < numbers.length; i++){
+    sum  = sum + numbers[i]  // can be shorten, sum += numbers[i]
 
-</script>
+    }
+
+    console.log(sum)  // 15
+// while loop
+    let i = 0
+    while (i <= 5) {
+    console.log(i)
+    i++
+    }
+// 2 times table using while loop
+    let m = 0
+    while (m <= 12) {
+    console.log(`2 * ${m} = ${2 * m}`);
+    m++
+    }
+    // / 0 1 2 3 4 5
+
+// do while loop
+let int = 0
+
+ do {
+    console.log(i)
+    int++
+    } while (int <= 5)
+// 2 times table using  do while loop
+    let p= 1
+ do {
+    console.log(`2 * ${p} = ${2 * p}`)
+    p++
+    } while (p <= 12)
+
+    let teg = numbers.length - 1
+    do {
+    console.log(numbers[teg])
+    teg--
+    } while (teg >= 0)
+
+    newAr = [9, 6, 3, 5, 1, 8, 2, 4, 7]
+    newArr2 = newAr.sort()    
+    console.log(newArr2);
+    
+    let tegg= newArr2.length - 1
+    do {
+    console.log(newArr2[tegg])
+    tegg--
+    } while (tegg >= 0)
+// for of loop
+// it cannot be reversed
+    let latestArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+    for (const element of latestArr) {
+        console.log(element);
+    }
+
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] 
+    for (const element of arr) {
+        console.log(`2 x ${element} = ${2 * element}`)     
+        
+    }
+// break
+function show() {
+    let reactClass = ['devisha', 'mr daniel','mr dotun', 'mr alex','mr john', 'mr deji','badman','shammah',' mr alfred','mr timi']
+    let javaClass = ['miss mary','mr stud','mr joshua','mr samuel','mr great','mr ridwan']
+    let input = document.getElementById("inp").value.trim()
+    for (let index = 0; index < reactClass.length; index++) {
+        if (input === `React student`) {
+            console.log(reactClass[index]);  
+        }
+        else if (input === `Javascript student`) {
+            if (index === 6) {
+                break
+            }
+            console.log(javaClass[index]);
+            
+        }
+        else if (!input) {
+            alert("Please enter either Javascript student or React student")
+
+        }
+        
+    }
+
+    
+}
+    let red = Math.floor(Math.random () * 257)
+   let green = Math.floor(Math.random () * 257)
+   let blue  = Math.floor(Math.random () * 257)
+    document.querySelector(".color").style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+   console.log(`rgb(${red}, ${green}, ${blue})`);
+   
+   
+   
+   
+</script>   

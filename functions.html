@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let show = "miss mary"
+    // FUNCTION DECLARATION  
+    function name() {
+        console.log("This is Javascript Class");
+        console.log(show);
+
+    }
+    name()
+
+    let username = `bella`
+    let password = `anyname`
+let ConfPassword = `a           nyname`
+    function logIn() {
+        if (!username || !password || !ConfPassword) {
+            alert("All fields are mandatory")
+            return
+        }
+          if (password !== ConfPassword) {
+            alert("passwords are not the same")
+            return
+        }
+        alert("user Logged in successful")
+    }
+    logIn()
+
+</script>

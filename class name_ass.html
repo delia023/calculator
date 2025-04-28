@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+        gap: 20px;
+        background-image: url(bird.jfif);
+        z-index: -1;
+    }
+
+    h1 {
+        color: white;
+        font-size: 30px;
+    }
+
+    #play {
+        background-color: transparent;
+        height: 50vh;
+        width: 90px;
+        color: black;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        z-index: 4;
+        font-weight: 500;
+    }
+    #inp:focus{
+        border: none;
+        outline: 3px solid rgb(21, 185, 250) ;
+    }
+
+    button {
+        border: none;
+        width: 70px;
+        border-radius: 10px;
+        height: 30px;
+        background-color: rgb(21, 185, 250);
+        font-size: 15px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+
+    button:hover {
+        background-color: white;
+        color: rgb(21, 185, 250);
+        transition: 1s ease-in;
+    }
+</style>
+
+<body>
+    <h1>Welcome to my World</h1>
+    <input id="inp" type="text">
+    <button onclick="show()">show</button>
+    <div id="play"></div>
+</body>
+
+</html>
+<script>
+    function show() {
+        let input = document.getElementById("inp").value.trim()
+        let display = document.getElementById("play")
+        let reactClass = ['devisha <br>', 'mr daniel <br>', 'mr dotun <br>', 'mr alex <br>', 'mr john <br>', 'mr deji <br>', 'badman <br>', 'shammah <br>', ' mr alfred <br>', 'mr timi <br>']
+        let javaClass = ['miss mary <br>', 'mr stud <br>', 'mr joshua <br>', 'mr samuel <br>', 'mr great <br>', 'mr ridwan <br>']
+        let python = ['mr nikko <br>', 'mr grey <br>', 'mr akeem <br>']
+        let html = ['mr tolu <br>', 'miss sekinat <br>', 'mario <br>', 'bella <br>', 'miss busayo <br>', 'mr ben <br>', 'nifemi <br>']
+        let graphic = ['delia <br>', 'miss joy <br>', 'mr lawrence <br>', 'miss shade <br>', 'bliss <br>', 'miss wumi <br>', 'mr sunday <br>', 'mr rapheal <br>', 'miss fathia <br>', 'dasola <br>', 'mr wisdom <br>', 'mr tayo <br>']
+        let value = true
+        for (let index = 0; index < graphic.length; index++) {
+            if (!input) {
+                value = false
+            }
+            else if (input === `Graphic student`) {
+                console.log(graphic[index]);
+                display.innerHTML = graphic.join("")
+            }
+            else if (input === `Javascript student`) {
+                if (index === 6) {
+                    break
+                }
+                console.log(javaClass[index]);
+                display.innerHTML = javaClass.join("")
+
+            }
+            else if (input === `React student`) {
+                if (index === 10) {
+                    break
+                }
+                console.log(reactClass[index]);
+                display.innerHTML = reactClass.join("")
+
+            }
+            else if (input === `Python student`) {
+                if (index === 3) {
+                    break
+                }
+                console.log(python[index]);
+                display.innerHTML = python.join("")
+
+            }
+            else if (input === `Html student`) {
+                if (index === 7) {
+                    break
+                }
+                console.log(html[index]);
+                display.innerHTML = html.join("")
+
+            }
+            else{
+                value = false
+            }
+
+        }
+
+        if(!value){
+            alert("Enter either Graphic student , Html student , Python student , React student and Javascript student!")
+        }
+        
+
+    }
+</script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+       background-image: url(bacgrondimg.jfif);
+       height: 100vh;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+    }
+    h1{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+    }
+    input{
+        height: 40px;
+        width: 30%;
+        border: none;
+        border-radius: 8px;
+    }
+    button{
+        background-color:blue;
+        height: 40px;
+        text-align: center;
+        width: 10%;
+        border: none;
+        border-radius: 10px;
+        color: white;
+    }
+    #answer{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    /* RESPONSIVENESS */
+    @media (max-width:616px){
+        button{
+            height: 30px;
+            width: 12%;
+            border-radius: 10px;
+        }
+            input{
+            height: 40px;
+            width: 40%;
+        }
+    }
+    @media (max-width:511px){
+        button{
+            height: 38px;
+            width: 15%;
+            border-radius: 10px;
+        }
+            input{
+            height: 40px;
+            width: 50%;
+        }
+    }
+    @media (max-width:453px){
+        button{
+            height: 38px;
+            width: 20%;
+            border-radius: 10px;
+        }
+            input{
+            height: 40px;
+            width: 60%;
+        }
+    }
+@media (max-width:394px){
+    button{
+            height: 38px;
+            width: 20%;
+            border-radius: 10px;
+        }
+            input{
+            height: 40px;
+            width: 60%;
+        }
+        h1{
+            font-size: 30px;
+        }
+}
+</style>
+<body>
+    <h1>Area Of A Rectangle</h1>
+    <input id="length" type="text">
+    <input id="width" type="text">
+    <button onclick="calculate ()">Calculate</button>
+    <div id="answer"></div>
+
+</body>
+</html>
+<script>
+    function calculate() {
+       let length = document.getElementById("length")
+       let width = document.getElementById("width")
+       let len = +(length.value.trim)
+       let wid = +(width.value.trim)
+       if (!len || !wid) {
+        alert("Please enter a valid number ")
+       }
+       let ans = len * wid
+       console.log(`Ans:${ans}`);
+       answer.innerHTML =(`Ans:${ans}`)
+    }
+    
+</script>
